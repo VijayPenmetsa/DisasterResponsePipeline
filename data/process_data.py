@@ -1,8 +1,6 @@
 
 """
 PREPROCESSING DATA
-Disaster Response Pipeline Project
-Udacity - Data Science Nanodegree
 Sample Script Execution:
 > python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
 Arguments:
