@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [image4]: ./writeupimages/warped.png "Perspective Transform"
 [image5]: ./writeupimages/histogram.png "Histogram"
 [image6]: ./writeupimages/slidingwindow.png "Sliding Window"
-[image7]: ./writeupimages/searchprior.png "Search Prior"
+[image7]: ./writeupimages/seachprior.png "Search Prior"
 [image8]: ./writeupimages/inversetransform.png "Output"
 [video1]: ./project_video_output.mp4 "Output Video"
 
@@ -62,6 +62,7 @@ example images-----------------------------------
 
 ![alt text][image1]
 ![alt text][image2]
+
 
 ## Color transform and Gradients
 
@@ -108,8 +109,6 @@ def colorandgradient2(img, s_thresh=(40,255), sx_thresh=(10,200)):
     return combined_binary
 ```
 
-example image ---------------------
-
 ![alt text][image3]
 
 
@@ -119,10 +118,10 @@ To perform a perspective transform, I manually selected the vertices of the sour
 
 ```python
 # Vertices extracted manually for performing a perspective transform
-bottom_left = [220,720] 
-bottom_right = [1110, 720] 
-top_left = [570, 470]
-top_right = [720, 470]
+bottom_left = [270,720] 
+bottom_right = [1160, 720] 
+top_left = [580, 470]
+top_right = [730, 470]
 
 
 source = np.float32([bottom_left,bottom_right,top_right,top_left])
@@ -169,8 +168,6 @@ plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 | 720, 470      | 920, 1        |
 
 
-Example of the Warped Image--------------------------------------
-
 ![alt text][image4]
 
 
@@ -190,9 +187,9 @@ def hist(img):
     
     return histogram
 ```
-Histogram image ----------------------------
 
 ![alt text][image5]
+
 
 ### Sliding Window Search
 
@@ -304,9 +301,8 @@ def slidingWindow(warped):
     return left_fitx, right_fitx, ploty
 ```
 
-sliding window image example -----------------------------------
-
 ![alt text][image6]
+
 
 ### Search from prior lane positions
 
@@ -346,9 +342,9 @@ def searchPrior(binary_warped, left_fitx, right_fitx):
     
     return left_fitx, right_fitx, ploty
 ```
-search prior example image --------------------------------
 
 ![alt text][image7]
+
 
 ## Determining curvature radius and vehicle position
 
@@ -418,8 +414,6 @@ cv2.putText(result, offset, (100, 150), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255,255,
 plt.imshow(result)
 ```
 
-result image---------------------------------------
-
 ![alt text][image8]
 
 ---
@@ -432,6 +426,8 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 # Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
-
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+ - First I had to experiment a lot with the color and gradient thresholding.
+ 
+ - The pipeline works well for the project video but it struggles with the challenge video.
+ 
+ - Tuning the color and gradient thresholds and decreasing the size of region of interest could help with the challenging videos.
