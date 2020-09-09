@@ -58,8 +58,6 @@ Now using 'mtx' and 'dist' (camera matrix and distortion coefficients) we can un
 undistorted = cv2.undistort(img, mtx, dist, None, mtx)
 ```
 
-example images-----------------------------------
-
 ![alt text][image1]
 ![alt text][image2]
 
