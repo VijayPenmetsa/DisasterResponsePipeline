@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image3]: ./writeupimages/thresholded.png "Binary Example"
 [image4]: ./writeupimages/warped.png "Perspective Transform"
 [image5]: ./writeupimages/histogram.png "Histogram"
-[image6]: ./writeupimages/slidingwindow.png "Sliding Window"
+[image6]: ./writeupimages/slidingwindows.png "Sliding Window"
 [image7]: ./writeupimages/seachprior.png "Search Prior"
 [image8]: ./writeupimages/inversetransform.png "Output"
 [video1]: ./project_video_output.mp4 "Output Video"
