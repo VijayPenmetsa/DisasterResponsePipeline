@@ -1,5 +1,7 @@
 # Disaster Response Pipeline Project
 
+### This project is a part of data science Nanodegree
+
 ### Dependencies
 - Latest version of Python
 - ML libraries : NumPy, SciPy, Pandas, Sciki-Learn
